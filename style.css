@@ -451,4 +451,32 @@ html, body {
     padding: 20px !important;
     box-sizing: border-box;
   }
+
+  .mega-menu {
+    width: 100vw !important; 
+    left: 0 !important;
+    padding: 20px 15px !important; 
+    box-sizing: border-box;
+  }
+
+  .menu-grid {
+    display: flex !important;
+    overflow-x: auto !important; /* Enables horizontal scrolling */
+    flex-wrap: nowrap !important; /* Forces items into a single row */
+    gap: 15px !important;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    padding-bottom: 15px; /* Space for the invisible scrollbar */
+  }
+
+  /* Hides the scrollbar line but keeps it functional */
+  .menu-grid::-webkit-scrollbar {
+    display: none; 
+  }
+
+  .menu-item {
+    flex-shrink: 0 !important; /* Prevents items from shrinking */
+    width: 200px; /* Gives each item a consistent width */
+    background: #f4f4f4; /* Optional: adds a slight background to make them look like cards */
+  }
+
 }

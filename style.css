@@ -375,18 +375,19 @@ body {
   font-size: 1.5rem;
 }
 
-@media (max-width: 900px) {
-    .site-header {
-        padding: 12px 20px;
-    }
-    .main-nav {
-        display: none;
-    }
-    .deal-card {
-        flex-direction: column;
-    }
-    .deal-banner-wrapper {
-        border-right: none;
-        border-bottom: 1px solid #eeeeee;
-    }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide desktop nav items or move to hamburger menu */
+  }
+
+  .header-container {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
 }

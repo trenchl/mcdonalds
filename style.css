@@ -381,13 +381,54 @@ html, body {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    display: none; /* Hide desktop nav items or move to hamburger menu */
+  /* Prevent side-scrolling overall */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
   }
 
-  .header-container {
+  /* Make header stack nicely */
+  .site-header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  /* Scroll nav items horizontally instead of squishing the page */
+  .main-nav {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
     width: 100%;
-    padding: 0 16px;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-item {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    flex-shrink: 0; /* Prevents text from shrinking */
+  }
+
+  /* Hide top black bar links to save vertical space */
+  .header-left > div:first-child,
+  .header-right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.8rem;
+  }
+
+  /* Stack deal card elements vertically on mobile */
+  .deal-card {
+    flex-direction: column !important;
+    width: 100% !important;
     box-sizing: border-box;
+    padding: 15px !important;
+  }
+
+  .deal-banner-wrapper img,
+  .full-deal-image {
+    width: 100% !important;
+    height: auto !important;
   }
 }

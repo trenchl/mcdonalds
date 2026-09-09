@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     megaMenu.classList.toggle("active");
   });
 
-  // Close the dropdown menu if clicking anywhere outside
+
   document.addEventListener("click", function (event) {
     if (!megaMenu.contains(event.target) && event.target !== menuBtn) {
       megaMenu.classList.remove("active");

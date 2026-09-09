@@ -16,3 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+window.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector(".main-nav");
+  if (nav) {
+    nav.scrollLeft = 0;
+  }
+});
